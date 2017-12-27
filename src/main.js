@@ -19,6 +19,7 @@ const animateSnake=function() {
   }
   if(isEnd(head.x,head.y,head.direction)){
     console.log('out');
+    document.getElementById('msg').innerText = 'OUT';
     clearInterval(animator);
   }
 }

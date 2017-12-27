@@ -24,3 +24,7 @@
   background-color: blue;
   border-radius: 50%;
 }
+#msg{
+  text-align: center;
+  font-size: 40px;
+}
