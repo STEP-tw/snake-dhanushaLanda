@@ -40,7 +40,6 @@ Position.prototype.isSameCoordAs=function(other) {
 }
 
 Position.prototype.getCoord=function() {
-  console.log([this.x,this.y,this.direction]);
   return [this.x,this.y];
 }
 

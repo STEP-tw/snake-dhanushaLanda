@@ -1,5 +1,3 @@
-let numberOfRows=60;
-let numberOfCols=120;
 
 const getboundry = function(direction){
   let limit ;
@@ -9,11 +7,11 @@ const getboundry = function(direction){
 }
 
 const isEnd = function(x,y,direction){
-  if(direction=='east'|| direction == 'west')
-    let xBoundry = getboundry(direction);
-    return xBoundry.includes(x);
+  let boundry ;
+  if(direction=='east'|| direction == 'west'){
+     boundry = getboundry(direction);
+    return boundry.includes(x);
   }
-  let yBoundry = getboundry(direction);
-  return yBoundry.includes(y);
+  boundry = getboundry(direction);
+  return boundry.includes(y);
 }
-isEnd('east');
