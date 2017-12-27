@@ -1,4 +1,11 @@
 
+
+
+const areInSameDirection = function(headDirection,snakeDirections){
+  return snakeDirection.every(function(direction){return direction==headDirection});
+}
+
+
 const getboundry = function(direction){
   let limit ;
   if(direction=='east'||direction=='west')

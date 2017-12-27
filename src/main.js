@@ -18,7 +18,6 @@ const animateSnake=function() {
     drawFood(food);
   }
   if(isEnd(head.x,head.y,head.direction)){
-    console.log('out');
     document.getElementById('msg').innerText = 'OUT';
     clearInterval(animator);
   }
@@ -57,6 +56,10 @@ const createSnake=function() {
 
 const createFood=function(numberOfRows,numberOfCols) {
   food=generateRandomPosition(numberOfCols,numberOfRows);
+}
+
+const reloadThePage = function(){
+  window.location.reload();
 }
 
 const startGame=function() {
