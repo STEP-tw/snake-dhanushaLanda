@@ -10,6 +10,11 @@ Snake.prototype={
   getHead:function() {
     return this.head;
   },
+  isSnakeEatingItsOwnBody : function(head){
+    return this.body.some(function(cell){
+      return cell.isSameCoordAs(head);
+    });
+  },
   move:function() {
     this.body.push(this.head);
     this.head=this.head.next();
@@ -23,5 +28,6 @@ Snake.prototype={
   },
   turnRight:function() {
     this.head=this.head.turnRight();
-  }
+  },
+
 }

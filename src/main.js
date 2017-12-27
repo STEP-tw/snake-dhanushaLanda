@@ -17,8 +17,8 @@ const animateSnake=function() {
     createFood(numberOfRows,numberOfCols);
     drawFood(food);
   }
-  if(isEnd(head.x,head.y,head.direction)){
-    document.getElementById('msg').innerText = 'OUT';
+  if(isEnd(head.x,head.y,head.direction) || snake.isSnakeEatingItsOwnBody(head)){
+    document.getElementById('msg').innerText = 'Game Over';
     clearInterval(animator);
   }
 }
